@@ -1,0 +1,322 @@
+
+
+.pagination {
+    list-style: none !important;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .pagination li {
+    color: black;
+    float: left;
+    text-decoration: none;
+    transition: background-color .3s;
+    cursor: pointer;
+    font-family: Roboto, "Segoe UI", Tahoma, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 5px 10px;
+    display: block;
+    border-radius: 4px;
+    box-shadow: 0px 2px 2px -1px rgba(0, 0, 0, 0.06), 0px 2px 0px 0px rgba(0,0,0,0.14), 0px 1px 0px 1px rgba(0,0,0,0.12);
+    border: 0px !important;
+  }
+  .pagination li a{
+    text-decoration: none;
+    color: unset;
+    border-color: unset;
+    display: flex;
+    align-items: inherit;
+    justify-content: inherit;
+  }
+  
+  .pagination li.active {
+    background-color: var(--main-color);
+    color: var(--text-color);
+    border: 1px solid var(--main-color);
+    background-size: cover;
+  }
+  .pagination li.disabled{
+    background-color: #f2f2f2;
+  }
+  .pagination li.disabled a{
+    cursor: no-drop !important;
+  }
+  .pagination li:hover:not(.active) {background-color: #ddd;}
+
+  .alignPage{
+      display: flex !important;
+      justify-content: space-between;
+      padding: 10px 0px;
+      font-size: 13px;
+  }
+  .MuiSelect-root{
+    width: 300px !important;
+  }
+  .inputPagination{
+    width: 50% !important;
+  }
+  .material-icons{
+    font-size: 18px !important;
+  }
+  .MuiMenuItem-root{ 
+    font-size: 12px;
+    min-height: 25px;
+  }
+  .alignSearchPage{
+    position: relative;
+    bottom: 13px;
+  }
+  .pageSizeText{
+    font-weight: 500;
+  }
+
+.textAlign{
+  text-align: left !important;
+}
+.iconAlign{
+  text-align: center !important;
+}
+.numberAlign{
+  text-align: right !important;
+}
+.fixedAlign{
+  text-align: center !important;
+}
+
+.tableStyle{
+  width: 100%;
+  display: table;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.tableStyle tr {
+  border-bottom: 1px solid #e8e5e5;
+}
+
+.tableStyle thead {
+  border-bottom: double #CCC;
+  border-top: 1px solid #CCCCCC;
+  color: #000;
+}
+
+.tableStyle th {
+  font-size: 11px;            
+}
+
+.tableStyle td, th {
+  padding: 5px;
+  color:#111;
+}
+
+.tableStyle td {
+  font-size: 12px;
+  font-weight:400;
+  padding: 5px;
+}
+.tableStyle th ._sortableTrue{
+  position: relative;
+  top:0px;
+
+  color: #000;
+  cursor: pointer;
+}
+
+.tableStyle th ._sortableFalse{
+position: relative;
+top:0px;
+
+color:#9c9c9c;
+cursor: pointer
+}
+.alignSearchPage{
+  display: flex;
+}
+.alignPage{
+  padding: 10px 0px;
+  font-size: 13px;
+}
+
+
+.tableLoader {
+  position: relative;
+  overflow: hidden;
+}
+
+  .tableLoader:before {
+    visibility: visible;
+    display: table-caption;
+    content: " ";
+    width: var(--full_per);
+  
+    background-image: linear-gradient( rgb(233, 233, 233) 1px, transparent 0 ), linear-gradient(90deg, rgb(241, 241, 241) 1px, transparent 0 ), linear-gradient( 90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5) 15%, rgba(255, 255, 255, 0) 30% ), linear-gradient( rgb(243, 243, 243) 35px, transparent 0 );
+    background-repeat: repeat;
+    background-size: 1px 35px, calc(100% * 0.1) 1px, 30% 100%, 2px 70px;
+    background-position: 0 0, 0 0, 0 0, 0 0;
+    animation: shine 0.5s infinite;
+    position: absolute;
+    z-index: 5;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 30px;
+
+  }
+
+@keyframes shine {
+  to {
+      background-position: 0 0, 0 0, 40% 0, 0 0;
+  }
+}
+
+.pagination .MuiSvgIcon-root {
+  fill: currentColor;
+  width: 0.7em !important;
+  height: 0.7em !important;
+  display: inline-block;
+  font-size: 1.5rem;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  flex-shrink: 0;
+  user-select: none;
+}
+
+.Pagination-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.pagination-number {
+  position: relative;
+  left: -40px;
+}
+
+
+
+@media (max-width: 599px){
+  .Pagination-wrapper {
+    display: unset;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  .pagination {
+    margin-left: -3px;
+}
+.pagination-value {
+  margin-top: 11px;
+  margin-left: -12px !important;
+}
+.pagination-col {
+  margin-left: 12px !important;
+  margin-top: 13px !important;
+}
+}
+@media (max-width: 840px){
+  .Pagination-wrapper {
+    display: unset;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  .pagination {
+    margin-left: -3px;
+}
+.pagination-value {
+  margin-top: 22px;
+  
+}
+.pagination-col {
+  margin-left: 10px !important;
+
+}
+}
+@media (max-width: 760px){
+  .Pagination-wrapper {
+    display: unset;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  .pagination {
+    margin-left: -3px;
+}
+.pagination-value {
+  margin-top: 20px;
+  margin-left: -12px !important;
+}
+.pagination-col {
+  margin-left: 12px !important;
+  margin-top: 13px !important;
+}
+}
+@media only screen and (max-width: 1600px) and (min-width: 1020px)  {
+  .Pagination-wrapper {
+    display: unset;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  .pagination {
+    margin-left: -3px;
+}
+.pagination-value {
+  margin-top: 0px;
+  margin-left: 100px !important;
+}
+.pagination-col {
+  margin-left: -100px !important;
+  margin-top: 0px !important;
+}
+.pagination-number {
+  position: relative;
+  left: -40px;
+}
+
+}
+.bom-table .tableStyle th {
+  width: 100px;
+}
+
+.sap--error svg{
+  fill: red !important;
+  vertical-align: bottom;
+  position: relative;
+  top: 1px;
+}
+
+.sap--error{
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cool-link {
+  display: inline-block;
+  color: #000;
+  text-decoration: none;
+}
+
+.cool-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: rgb(255, 0, 0);
+  transition: width .3s;
+  margin-left: 24px;
+}
+
+.cool-link:hover::after {
+  width: calc(100% - 24px );
+  transition: width .3s;
+}
+
+.cancel-order{
+  color: #000;
+  text-align: center;
+  cursor: pointer !important;
+}
+
+th[align="center"]{
+  text-align: center !important;
+}
+
+.left7{
+  position: relative;
+  left: -7px;
+}
